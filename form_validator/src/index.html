@@ -8,162 +8,200 @@
     <title>Form</title>
   </head>
   <body>
-   
-    <div class="mx-20 mt-2 mb-10 bg-gray-600 rounded-2 shadow-xl ">
+    <div
+      class="mx-2 mt-4 bg-gray-600 rounded-2 shadow-xl hover:shadow-2xl duration-500"
+    >
       <!--Title-->
       <div class="bg-gray-600 text-sm font-bold px-2 py-4">
         <h1>Kullanıcı Oluştur</h1>
       </div>
       <!--Gırıs-->
-      <div class="bg-gray-200 text-sm px-2 py-4 flex flex-col gap-y-5">
-        <!--Username-->
-        <div class="flex flex-col gap-2">
-          <h2 class="text-start font-semibold">Username</h2>
-          <div
-            class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
-          >
-            <div>
-                <input class="  w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none " type="text" placeholder="Enter Username">
+
+      <form action="" id="form" novalidate>
+        <div class="bg-gray-200 text-sm px-2 py-4 flex flex-col gap-y-5">
+          <!--Username-->
+          <div class="flex flex-col gap-2">
+            <h2 class="text-start font-semibold">Username</h2>
+            <div
+              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
+              id="usernameborder"
+            >
+              <input
+                class="w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none"
+                type="text"
+                placeholder="Enter Username"
+                id="username"
+              />
+
+              <div class="" id="usernamewarning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
             </div>
-            <div class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+            <p class="text-start text-xs" id="">duzgun username gir</p>
+          </div>
+          <!--Email-->
+          <div class="flex flex-col gap-2">
+            <h2 class="text-start font-semibold">Email</h2>
+            <div
+              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
+              id="emailborder"
+            >
+              <div>
+                <input
+                  class="w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none"
+                  type="email"
+                  placeholder="Enter Email"
+                  id="email"
                 />
-              </svg>
+              </div>
+              <div class="" id="emailwarning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
             </div>
+            <p class="text-start text-xs">duzgun username gir</p>
           </div>
-          <p class="text-start text-xs">duzgun username gir</p>
+          <!--Phone-->
+          <div class="flex flex-col gap-2">
+            <h2 class="text-start font-semibold">Phone</h2>
+            <div
+              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
+              id="phoneborder"
+            >
+              <div>
+                <input
+                  class="w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none"
+                  type="text"
+                  placeholder="Enter Phone"
+                  id="phone"
+                />
+              </div>
+              <div class="" id="phonewarning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p class="text-start text-xs">duzgun username gir</p>
+          </div>
+
+          <!--Password-->
+          <div class="flex flex-col gap-2">
+            <h2 class="text-start font-semibold">Password</h2>
+            <div
+              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
+              id="passwordborder"
+            >
+              <div>
+                <input
+                  class="w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none"
+                  type="password"
+                  placeholder="Enter Password"
+                  id="password"
+                />
+              </div>
+              <div class="" id="passwordwarning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p class="text-start text-xs">duzgun username gir</p>
+          </div>
+
+          <!--RePassword-->
+          <div class="flex flex-col gap-2">
+            <h2 class="text-start font-semibold">Re-Password</h2>
+            <div
+              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
+              id="repasswordborder"
+            >
+              <div>
+                <input
+                  class="w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none"
+                  type="password"
+                  placeholder="Re-Password"
+                  id="repassword"
+                />
+              </div>
+              <div class="" id="repasswordwarning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p class="text-start text-xs">duzgun username gir</p>
+          </div>
+
+          <!--Register Button-->
+          <button
+            id="button"
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-400 py-2 px-4"
+          >
+            Register
+          </button>
         </div>
-        <!--Email-->
-        <div class="flex flex-col gap-2">
-            <h2 class="text-start font-semibold">Username</h2>
-            <div
-              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
-            >
-              <div>
-                  <input class="  w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none " type="text" placeholder="Enter Username">
-              </div>
-              <div class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-5 h-5"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="text-start text-xs">duzgun username gir</p>
-          </div>
-        <!--Phone-->
-        <div class="flex flex-col gap-2">
-            <h2 class="text-start font-semibold">Username</h2>
-            <div
-              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
-            >
-              <div>
-                  <input class="  w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none " type="text" placeholder="Enter Username">
-              </div>
-              <div class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-5 h-5"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="text-start text-xs">duzgun username gir</p>
-          </div>
-        
-        <!--Password-->
-        <div class="flex flex-col gap-2">
-            <h2 class="text-start font-semibold">Username</h2>
-            <div
-              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
-            >
-              <div>
-                  <input class="  w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none " type="text" placeholder="Enter Username">
-              </div>
-              <div class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-5 h-5"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="text-start text-xs">duzgun username gir</p>
-          </div>
-        
-        <!--RePassword-->
-        <div class="flex flex-col gap-2">
-            <h2 class="text-start font-semibold">Username</h2>
-            <div
-              class="w-full border-2 border-black px-2 py-1 flex items-center justify-between rounded"
-            >
-              <div>
-                  <input class="  w-full py-1 px-1 bg-gray-200 leading-tight focus:outline-none " type="text" placeholder="Enter Username">
-              </div>
-              <div class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-5 h-5"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="text-start text-xs">duzgun username gir</p>
-          </div>
-       
-        <!--Register Button-->
-        <div class="flex items-center justify-center  shadow-sm shadow-blue-400 rounded-sm bg-blue-800 text-white py-2 hover:bg-blue-600 duration-500
-        hover:border-1 hover:py-3">
-          Register </div>
-        
+      </form>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

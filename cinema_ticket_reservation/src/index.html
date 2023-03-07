@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link rel="stylesheet" href="/dist/mystyle.css" />
+    <title>Cinema Ticket</title>
+  </head>
+  <body class="bg-gray-600">
+    <div class="flex items-center justify-center h-screen">
+      <div class="flex flex-col">
+        <div
+          class="screen px- py-4 bg-white h-40 w-full shadow-md shadow-white mb-12"
+        ></div>
+        <div class="flex flex-row">
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+        </div>
+        <div class="flex flex-row">
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat reserved bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat reserved bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+        </div>
+        <div class="flex flex-row">
+          <div class="seat reserved bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div
+            class="seat bg-gray-400 h-12 w-12 m-3 transform hover:rotate-45 transition duration-300"
+          >
+            <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
+          </div>
+
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+        </div>
+        <div class="flex flex-row">
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+        </div>
+        <div class="flex flex-row">
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+        </div>
+
+        <div class="movie-list text-center mt-12">
+          <select name="" id="movie">
+            <option disabled>Film Seçiniz</option>
+            <option value="20">Movie 1</option>
+            <option value="21">Movie 2</option>
+            <option value="22">Movie 3</option>
+          </select>
+        </div>
+        <div class="mt-10 bg-gray-700 rounded-md">
+          <ul class="info flex justify-around items-center">
+            <li class="flex flex-row items-center">
+              <div class="seat selected bg-gray-400 h-12 w-12 m-3"></div>
+              <small class="text-white">Seçili</small>
+            </li>
+
+            <li class="flex flex-row items-center">
+              <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+              <small class="text-white">boş</small>
+            </li>
+            <li class="flex flex-row items-center">
+              <div class="seat reserved bg-gray-400 h-12 w-12 m-3"></div>
+              <small class="text-white">Dolu</small>
+            </li>
+          </ul>
+        </div>
+        <p class="text-center mt-10 text text-white text-sm">
+          <span class="text-yellow-200 text-xl" id="count">3</span> adet koltuk
+          için hesaplanan ücret
+          <span class="text-yellow-200 text-xl" id="amount">60</span> TL.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
