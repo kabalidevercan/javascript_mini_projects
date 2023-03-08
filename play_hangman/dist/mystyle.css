@@ -1,0 +1,18 @@
+.grafik {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.item {
+  display: ;
+}
+
+.letter {
+  border-bottom: 3px solid yellow;
+  font-size: 25px;
+  height: 40px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+}

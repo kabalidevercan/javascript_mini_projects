@@ -1,1 +1,1 @@
-!(cool!)["/cinema_ticket.PNG"]
+![cool!](cinema_ticket.PNG)

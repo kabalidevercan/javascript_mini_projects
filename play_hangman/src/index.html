@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link rel="stylesheet" href="/dist/mystyle.css" />
+    <title>Play Hangman</title>
+  </head>
+  <body>
+    <div class="mx-20 mt-20">
+      <div
+        class="mx-4 py-20 px-20 bg-gray-400 h-full rounded-xl flex flex-col shadow-md shadow-black"
+      >
+        <h1 class="text-center font-bold text-4xl">Adam Asmaca</h1>
+        <p class="text-center text-white text-xl mt-5">
+          Gizlenmiş kelimeyi bulmak için bir harf giriniz
+        </p>
+        <div class="relative">
+          <div class="container mt-20">
+            <svg height="210" width="500" class="grafik">
+              <!--Sehpa-->
+              <line x1="50" y1="20" x2="130" y2="20" />
+              <line x1="130" y1="20" x2="130" y2="50" />
+              <line x1="50" y1="20" x2="50" y2="250" />
+              <line x1="10" y1="250" x2="90" y2="250" />
+
+              <!--Kafa-->
+              <circle cx="130" cy="70" r="20" class="item" />
+
+              <!--gövde-->
+              <line x1="130" y1="90" x2="130" y2="170" class="item" />
+
+              <!--Kollar-->
+              <line x1="130" y1="120" x2="100" y2="100" class="item" />
+              <line x1="130" y1="120" x2="160" y2="100" class="item" />
+
+              <!--Bacaklar-->
+              <line x1="130" y1="170" x2="100" y2="190" class="item" />
+              <line x1="130" y1="170" x2="160" y2="190" class="item" />
+            </svg>
+          </div>
+          <div id="wrong-letters" class="absolute top-24 right-20">
+            <h3>Hatalı Harfler</h3>
+            <span>a,b,c</span>
+          </div>
+        </div>
+        <div
+          id="word"
+          class="space-x-2 text-center items-center justify-center flex font-bold"
+        ></div>
+      </div>
+    </div>
+    <!--Javascript-->
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>
