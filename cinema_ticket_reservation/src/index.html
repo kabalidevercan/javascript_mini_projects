@@ -9,7 +9,7 @@
     <title>Cinema Ticket</title>
   </head>
   <body class="bg-gray-600">
-    <div class="flex items-center justify-center h-screen">
+    <div class="flex items-center justify-center h-screen konteynir">
       <div class="flex flex-col">
         <div
           class="screen px- py-4 bg-white h-40 w-full shadow-md shadow-white mb-12"
@@ -39,12 +39,7 @@
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
-          <div
-            class="seat bg-gray-400 h-12 w-12 m-3 transform hover:rotate-45 transition duration-300"
-          >
-            <div class="h-full w-full bg-white rounded-lg shadow-2xl"></div>
-          </div>
-
+          <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
           <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
@@ -71,7 +66,7 @@
         </div>
 
         <div class="movie-list text-center mt-12">
-          <select name="" id="movie">
+          <select id="movie">
             <option disabled>Film Seçiniz</option>
             <option value="20">Movie 1</option>
             <option value="21">Movie 2</option>
@@ -81,16 +76,28 @@
         <div class="mt-10 bg-gray-700 rounded-md">
           <ul class="info flex justify-around items-center">
             <li class="flex flex-row items-center">
-              <div class="seat selected bg-gray-400 h-12 w-12 m-3"></div>
+              <div
+                class="seat bg-yellow-300 h-12 w-12 m-3 transform hover:rotate-45 transition duration-500"
+              >
+                <div class="h-full w-full rounded-lg shadow-2xl"></div>
+              </div>
               <small class="text-white">Seçili</small>
             </li>
 
             <li class="flex flex-row items-center">
-              <div class="seat bg-gray-400 h-12 w-12 m-3"></div>
+              <div
+                class="seat bg-gray-400 h-12 w-12 m-3 transform hover:rotate-45 transition duration-500"
+              >
+                <div class="h-full w-full rounded-lg shadow-2xl"></div>
+              </div>
               <small class="text-white">boş</small>
             </li>
             <li class="flex flex-row items-center">
-              <div class="seat reserved bg-gray-400 h-12 w-12 m-3"></div>
+              <div
+                class="seat reserved bg-gray-400 h-12 w-12 m-3 transform hover:rotate-45 transition duration-500"
+              >
+                <div class="h-full w-full rounded-lg shadow-2xl"></div>
+              </div>
               <small class="text-white">Dolu</small>
             </li>
           </ul>

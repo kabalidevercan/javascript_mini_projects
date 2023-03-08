@@ -17,3 +17,8 @@
 .seat:nth-last-of-type(3) {
   margin-right: 60px;
 }
+
+.seat:not(.reserved):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
