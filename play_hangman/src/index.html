@@ -13,7 +13,7 @@
       <div
         class="mx-4 py-20 px-20 bg-gray-400 h-full rounded-xl flex flex-col shadow-md shadow-black"
       >
-        <h1 class="text-center font-bold text-4xl">Adam Asmaca</h1>
+        <h1 class="text-center font-bold text-4xl">Play Hangman</h1>
         <p class="text-center text-white text-xl mt-5">
           Gizlenmiş kelimeyi bulmak için bir harf giriniz
         </p>
@@ -41,15 +41,29 @@
               <line x1="130" y1="170" x2="160" y2="190" class="item" />
             </svg>
           </div>
-          <div id="wrong-letters" class="absolute top-24 right-20">
-            <h3>Hatalı Harfler</h3>
-            <span>a,b,c</span>
-          </div>
+          <div id="wrong-letters" class="absolute top-24 right-20"></div>
         </div>
         <div
           id="word"
           class="space-x-2 text-center items-center justify-center flex font-bold"
         ></div>
+        <div id="popup-container" class="text-white">
+          <div class="popup">
+            <h2 id="success-message" class="text-xl">Kazandiniz</h2>
+            <button
+              id="play-again"
+              class="px-2 py-2 border-black border-2 mt-2"
+            >
+              Tekrar Oyna
+            </button>
+          </div>
+        </div>
+        <div
+          id="message"
+          class="mt-12 border-2 rounded-md shadow-md shadow-purple-600 text-xl border-gray-300 text-transparent bg-clip-text bg-gradient-to-br from-purple-800 to-gray-600 py-2"
+        >
+          <p class="text-center font-bold">Bu harfi zaten girdiniz</p>
+        </div>
       </div>
     </div>
     <!--Javascript-->
