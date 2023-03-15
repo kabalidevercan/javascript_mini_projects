@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/mystyle.css" />
+    <link rel="stylesheet" href="/dist/styles.css" />
+  </head>
+  <body>
+    <div class="h-screen pt-12 px-12">
+      <h1 class="text-start font-bold text-6xl mb-4">Course App</h1>
+      <div class="h-1 w-full bg-black"></div>
+      <div class="px-4 grid grid-cols-2 mt-8">
+        <div class="bg-white h-96 px-2 py-2">
+          <form action="" id="yenikurs">
+            <!--Course Title-->
+            <div class="form-group mb-4">
+              <label for="title" class="text-start text-xl font-bold"
+                >Course Title</label
+              >
+              <div
+                class="w-full h-12 items-center justify-start flex px-2 rounded-md border-2 border-gray-300"
+              >
+                <input type="text" id="title" />
+              </div>
+            </div>
+            <!--Instructor-->
+            <div class="form-group mb-4">
+              <label for="instructor" class="text-start text-xl font-bold"
+                >Instructor</label
+              >
+              <div
+                class="w-full h-12 items-center justify-start flex pl-2 rounded-md border-2 border-gray-300"
+              >
+                <input type="text" id="instructor" />
+              </div>
+            </div>
+            <!--Image-->
+            <div class="form-group mb-4">
+              <label for="image" class="text-start text-xl font-bold"
+                >Image</label
+              >
+              <div
+                class="w-full h-12 items-center justify-start flex pl-2 rounded-md border-2 border-gray-300"
+              >
+                <input type="text" id="image" />
+              </div>
+            </div>
+            <!--Button Save-->
+            <button
+              type="submit"
+              class="btn border-2 border-black bg-gray-400 px-10 py-2 text-center"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+        <!--Second Panel-->
+        <div class="bg-purple-500 ml-2">
+          <table class="table">
+            <thead>
+              <tr class="flex space-x-12 bg-yellow-600">
+                <th class="w-32">Image</th>
+                <th class="w-32 border-l-2">Title</th>
+                <th class="w-32 border-l-2">Instructor</th>
+                <th class="w-32 border-l-2">sea</th>
+              </tr>
+            </thead>
+            <tbody id="course-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="js/appES5.js"></script>
+    <script src="js/appES6.js"></script>
+  </body>
+</html>
+
+<!-- <div class="container mt-3 bg-purple-600">
+    <h1>Course App</h1>
+    <hr />
+    <div class="row">
+      <div class="col-md-5">
+        <form action="" id="new-course">
+          <div class="form-group">
+            <label for="title">Course Title</label>
+            <input type="text" id="title" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="instructor">Instructor</label>
+            <input type="text" id="instructor" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" id="image" class="form-control" />
+          </div>
+          <button type="submit" class="">Save</button>
+        </form>
+      </div>
+      <div class="col-md-7">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Instructor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="course-list"></tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
