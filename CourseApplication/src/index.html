@@ -12,6 +12,9 @@
     <div class="h-screen pt-12 px-12">
       <h1 class="text-start font-bold text-6xl mb-4">Course App</h1>
       <div class="h-1 w-full bg-black"></div>
+      <!--Warning-->
+      <div class="row"></div>
+      <!--Form Panel-->
       <div class="px-4 grid grid-cols-2 mt-8">
         <div class="bg-white h-96 px-2 py-2">
           <form action="" id="yenikurs">
@@ -58,8 +61,34 @@
           </form>
         </div>
         <!--Second Panel-->
-        <div class="bg-purple-500 ml-2">
-          <table class="table">
+        <div
+          id="course-list"
+          class="ml-2 flex flex-col px-12 py-6 space-y-2 border-2 border-gray-300"
+        >
+          <div class="h-12 bg-white grid grid-cols-4 border-2">
+            <div
+              class="border-r-2 border-gray-300 items-center justify-center flex"
+            >
+              Image
+            </div>
+            <div
+              class="border-r-2 border-gray-300 items-center justify-center flex text-center"
+            >
+              Title
+            </div>
+            <div
+              class="border-r-2 border-gray-300 items-center justify-center flex text-center"
+            >
+              Instructor
+            </div>
+            <div
+              class="border-gray-300 items-center justify-center flex text-center"
+            >
+              Button
+            </div>
+          </div>
+
+          <!-- <table class="table">
             <thead>
               <tr class="flex space-x-12 bg-yellow-600">
                 <th class="w-32">Image</th>
@@ -69,11 +98,10 @@
               </tr>
             </thead>
             <tbody id="course-list"></tbody>
-          </table>
+          </table> -->
         </div>
       </div>
     </div>
-    <script src="js/appES5.js"></script>
     <script src="js/appES6.js"></script>
   </body>
 </html>
