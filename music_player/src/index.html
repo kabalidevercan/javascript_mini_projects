@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex flex-col items-center justify-center">
       <div class="w-1/2 border-2 shadow-xl shadow-gray-500 border-gray-300">
         <!--Image-->
         <div><img src="img/2.jpeg" id="music-image" class="w-full" /></div>
@@ -68,8 +68,18 @@
             class="bg-gray-200 flex flex-col-reverse md:flex-row items-center justify-between px-2 py-2"
           >
             <!--Sing List Button-->
-            <div
-              class="items-center bg-blue-500 hover:border-2 rounded-md border-black w-10 h-10 flex justify-center"
+            <!-- <div
+              id="list-button"
+              class="items-center bg-blue-500 hover:border-2 rounded-md border-black w-10 h-10 flex justify-center cursor-pointer"
+              name="menu"
+            >
+              
+            </div> -->
+            <button
+              id="list-button"
+              name="menu"
+              class="bg-blue-400 rounded-md px-2 py-2 hover:border-2 border-gray-600"
+              onclick="Menu(this)"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,30 +95,36 @@
                   d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
-            </div>
+            </button>
             <!--Voice-->
             <div class="flex flex-row space-x-2 w-48 items-center">
               <!--Microphone-->
               <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
-                  />
-                </svg>
+                <i class="fa-solid fa-volume-high" id="volume"></i>
               </div>
               <!--Slider Microphone-->
-              <div class="h-2 w-full bg-blue-300"></div>
+              <div class="w-ful">
+                <input
+                  type="range"
+                  name=""
+                  id="volume-bar"
+                  max="100"
+                  value="100"
+                />
+              </div>
             </div>
           </div>
+          <!--Song List-->
+          <div
+            class="w-full bg-purple-400 flex flex-col space-y-2 opacity-100 px-2"
+          >
+            <div id="ul" class="h-20">sea</div>
+            <div id="ul" class="h-20">sea</div>
+            <div id="ul" class="h-20">sea</div>
+            <div id="ul" class="h-20">sea</div>
+            <div id="ul" class="h-20">sea</div>
+          </div>
+          <!--Finish-->
         </div>
       </div>
     </div>
