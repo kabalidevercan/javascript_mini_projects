@@ -6,9 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/styles.css" />
     <link rel="stylesheet" href="/dist/mystyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
+    <div class="flex flex-col items-center justify-center h-screen">
+      <div class="w-1/2 border-2 shadow-xl shadow-gray-500 border-gray-300">
+        <!--Image-->
+        <div><img src="img/2.jpeg" id="music-image" class="w-full" /></div>
+        <!--Body-->
+        <div class="w-full flex flex-col">
+          <!--Ust Body-->
+          <div
+            class="flex flex-col items-center justify-center py-2 space-y-4 border-b-2 border-gray-300"
+          >
+            <!--Title-->
+            <h1 id="title" class="text-center font-bold">
+              Bu da Geçer mi Sevgilim - Yalın
+            </h1>
+            <!--Singer-->
+            <h2 id="singer" class="text-center font-medium">Yalın</h2>
+          </div>
+          <!--Orta Body-->
+          <div class="px-2 py-4 flex flex-col">
+            <!--Slider-->
+            <div class="container progress">
+              <input type="range" id="progress-bar" class="w-full" />
+              <audio src="" id="audio"></audio>
+            </div>
+            <!--Sing Time-->
+            <div class="times my-2 flex items-center justify-between">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+            <!--Buttons-->
+            <div
+              class="flex flex-row space-x-2 items-center text-center justify-center"
+            >
+              <div
+                class="rounded-full h-12 w-12 bg-blue-500 flex items-center justify-center hover:border-2 border-black"
+              >
+                <i id="prev" class="fa-solid fa-backward-step"></i>
+              </div>
+              <div
+                class="rounded-full h-16 w-16 bg-blue-500 flex items-center justify-center hover:border-2 border-black"
+              >
+                <i id="play" class="fa-solid fa-play"></i>
+              </div>
+              <div
+                class="rounded-full h-12 w-12 bg-blue-500 flex items-center justify-center hover:border-2 border-black"
+              >
+                <i id="next" class="fa-solid fa-forward-step"></i>
+              </div>
+            </div>
+          </div>
+          <!--Alt Body-->
+          <div
+            class="bg-gray-200 flex flex-col-reverse md:flex-row items-center justify-between px-2 py-2"
+          >
+            <!--Sing List Button-->
+            <div
+              class="items-center bg-blue-500 hover:border-2 rounded-md border-black w-10 h-10 flex justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+            <!--Voice-->
+            <div class="flex flex-row space-x-2 w-48 items-center">
+              <!--Microphone-->
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
+                  />
+                </svg>
+              </div>
+              <!--Slider Microphone-->
+              <div class="h-2 w-full bg-blue-300"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/music.js"></script>
     <script src="js/musicplayer.js"></script>
     <script src="js/app.js"></script>
