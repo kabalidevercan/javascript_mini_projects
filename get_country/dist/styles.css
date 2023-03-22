@@ -513,20 +513,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mt-24 {
   margin-top: 6rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .flex {
@@ -545,12 +541,12 @@ video {
   height: 0.125rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-1\/2 {
   height: 50%;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .w-1\/2 {
@@ -609,12 +605,12 @@ video {
   border-width: 2px;
 }
 
-.border-t-2 {
-  border-top-width: 2px;
-}
-
 .border-r-2 {
   border-right-width: 2px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .border-black {
