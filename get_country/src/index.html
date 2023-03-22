@@ -22,11 +22,12 @@
       >
         <!--Input:Text-->
         <div class="border-2 mt-6 border-black w-full">
-          <input type="text" id="#textInput" class="w-full px-2 py-2" />
+          <input type="text" id="textInput" class="w-full px-2 py-2" />
         </div>
         <!--Button:Text-->
         <button
           class="text-center bg-black w-1/2 text-white h-12 font-bold rounded"
+          id="btnSearch"
         >
           Search
         </button>
@@ -36,43 +37,8 @@
             Search Result
           </div>
           <!--Results-->
-          <div class="grid grid-cols-2">
+          <div class="grid grid-cols-2" id="country-details">
             <!--Image-->
-            <div class="w-full">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                alt=""
-                class="w-full"
-              />
-            </div>
-            <!--Country Information-->
-            <div class="bg-white flex flex-col px-2 py-2 space-y-6">
-              <div class="text-start font-bold text-xl">Türkiye</div>
-              <div class="h-0.5 w-full bg-black"></div>
-              <div class="flex flex-col w-full">
-                <!--Bilgiler-->
-                <div class="w-full flex justify-between">
-                  <div class="">Nüfus:</div>
-                  <div class="">72.000.000</div>
-                  <div></div>
-                </div>
-                <div class="w-full flex justify-between">
-                  <div class="">Resmi Dil:</div>
-                  <div class="">Türkçe</div>
-                  <div></div>
-                </div>
-                <div class="w-full flex justify-between">
-                  <div class="">Başkent:</div>
-                  <div class="">Ankara</div>
-                  <div></div>
-                </div>
-                <div class="w-full flex justify-between">
-                  <div class="">Para Birimi:</div>
-                  <div class="">Türk Lirası(TL)</div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
           </div>
           <!--Other Border Countries-->
           <div class="w-full flex flex-col">
@@ -81,72 +47,12 @@
               Border Countries
             </div>
             <!--Other Countries-->
-            <div class="bg-white grid grid-cols-6 gap-4 px-2 py-2">
+            <div
+              class="bg-white grid grid-cols-6 gap-4 px-2 py-2"
+              id="neighbors"
+            >
               <!--Other-->
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
-              <div class="flex flex-col border-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Turkey_flag_300.png"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="w-full px-2 py-1">Türkiye</div>
-              </div>
+              
               <!--Finish-->
             </div>
           </div>
