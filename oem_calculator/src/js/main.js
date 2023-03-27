@@ -60,6 +60,17 @@ const ProductController = (function () {
     },
     getCurrentProduct: function () {
       return data.selectedProduct;
+    },
+    updateProduct: function (name, price) {
+      let product = null;
+      data.products.forEach(function (prd) {
+        if (prd.id == data.selectedProduct.id) {
+          prd.name = name;
+          prd.price = parseFloat(price);
+          product = prd;
+        }
+      });
+      return product;
     }
   };
 })();
@@ -69,10 +80,11 @@ const ProductController = (function () {
 const UIController = (function (products) {
   const Selectors = {
     productList: '#item-list',
+    productListItems: '.tr',
     addButton: '.addBtn',
     updateButton: '.updateBtn',
-    deleteButton: 'deleteBtn',
-    cancelButton: 'cancelBtn',
+    deleteButton: '.deleteBtn',
+    cancelButton: '.cancelBtn',
     productName: '#productName',
     productPrice: '#productPrice',
     totalTl: '#total-tl',
@@ -85,7 +97,7 @@ const UIController = (function (products) {
       products.forEach(prd => {
         html += `
         <div
-            class="w-full px-2 py-1 items-center justify-between flex border-2 border-gray-50"
+            class="w-full px-2 py-1 items-center justify-between flex border-2 border-gray-50 tr"
           >
             <i>${prd.id}</i>
             <i>${prd.name}</i>
@@ -105,7 +117,7 @@ const UIController = (function (products) {
     addProduct: function (prd) {
       document.querySelector(Selectors.productList).style.display = 'block';
       var item = `<div
-      class="w-full px-2 py-1 items-center justify-between flex border-2 border-gray-50"
+      class="w-full px-2 py-1 items-center justify-between flex border-2 border-gray-50 tr"
     >
       <i>${prd.id}</i>
       <i>${prd.name}</i>
@@ -136,18 +148,43 @@ const UIController = (function (products) {
       document.querySelector(Selectors.productPrice).value =
         selectedProduct.price;
     },
-    addingState: function () {
+    addingState: function (item) {
+      if (item) {
+        item.classList.remove('bg-red-400');
+      }
       UIController.clearInputs();
-      document.querySelector(Selectors.addButton).style.display = 'block';
+      document.querySelector(Selectors.addButton).style.display = 'inline';
       document.querySelector(Selectors.updateButton).style.display = 'none';
       document.querySelector(Selectors.deleteButton).style.display = 'none';
       document.querySelector(Selectors.cancelButton).style.display = 'none';
     },
-    editState: function () {
+    editState: function (tr) {
+      const parent = tr.parentNode;
+
+      for (let i = 0; i < parent.children.length; i++) {
+        parent.children[i].classList.remove('bg-red-400');
+      }
+
+      tr.classList.add('bg-red-400');
       document.querySelector(Selectors.addButton).style.display = 'none';
       document.querySelector(Selectors.updateButton).style.display = 'inline';
       document.querySelector(Selectors.deleteButton).style.display = 'inline';
       document.querySelector(Selectors.cancelButton).style.display = 'inline';
+    },
+    updateProduct: function (prd) {
+      let updatedItem = null;
+
+      let items = document.querySelectorAll(Selectors.productListItems);
+
+      items.forEach(function (item) {
+        if (item.classList.contains('bg-red-400')) {
+          item.children[1].textContent = prd.name;
+          item.children[2].textContent = prd.price + ' $';
+          updatedItem = item;
+        }
+      });
+
+      return updatedItem;
     }
   };
 })();
@@ -199,7 +236,38 @@ const MainController = (function (ProductCtrl, UICtrl) {
           //add product to UI
           UICtrl.addProductToForm();
 
-          UICtrl.editState();
+          UICtrl.editState(e.target.parentNode);
+        }
+        e.preventDefault();
+      });
+
+    //edit product submit
+    document
+      .querySelector(UISelectors.updateButton)
+      .addEventListener('click', function (e) {
+        const productName = document.querySelector(
+          UISelectors.productName
+        ).value;
+        const productPrice = document.querySelector(
+          UISelectors.productPrice
+        ).value;
+        if (productName !== '' && productPrice !== '') {
+          //update Product
+          const updatedProduct = ProductCtrl.updateProduct(
+            productName,
+            productPrice
+          );
+
+          //updateUI
+          let item = UICtrl.updateProduct(updatedProduct);
+
+          //get total
+          const total = ProductCtrl.getTotal();
+
+          //show total
+          UICtrl.showTotal(total);
+
+          UICtrl.addingState(item);
         }
         e.preventDefault();
       });
