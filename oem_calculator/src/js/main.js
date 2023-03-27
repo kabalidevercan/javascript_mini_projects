@@ -71,6 +71,13 @@ const ProductController = (function () {
         }
       });
       return product;
+    },
+    deleteProduct: function (product) {
+      data.products.forEach(function (prd, index) {
+        if (prd.id == product.id) {
+          data.products.splice(index, 1);
+        }
+      });
     }
   };
 })();
@@ -133,6 +140,14 @@ const UIController = (function (products) {
       document.querySelector(Selectors.productName).value = '';
       document.querySelector(Selectors.productPrice).value = '';
     },
+    clearWarnings: function () {
+      const items = document.querySelectorAll(Selectors.productListItems);
+      items.forEach(function (item) {
+        if (item.classList.contains('bg-red-400')) {
+          item.classList.remove('bg-red-400');
+        }
+      });
+    },
     hideCard: function () {
       document.querySelector(Selectors.productList).style.display = 'none';
     },
@@ -148,10 +163,8 @@ const UIController = (function (products) {
       document.querySelector(Selectors.productPrice).value =
         selectedProduct.price;
     },
-    addingState: function (item) {
-      if (item) {
-        item.classList.remove('bg-red-400');
-      }
+    addingState: function () {
+      UIController.clearWarnings();
       UIController.clearInputs();
       document.querySelector(Selectors.addButton).style.display = 'inline';
       document.querySelector(Selectors.updateButton).style.display = 'none';
@@ -160,7 +173,6 @@ const UIController = (function (products) {
     },
     editState: function (tr) {
       const parent = tr.parentNode;
-
       for (let i = 0; i < parent.children.length; i++) {
         parent.children[i].classList.remove('bg-red-400');
       }
@@ -185,6 +197,14 @@ const UIController = (function (products) {
       });
 
       return updatedItem;
+    },
+    deleteProduct: function () {
+      let items = document.querySelectorAll(Selectors.productListItems);
+      items.forEach(function (item) {
+        if (item.classList.contains('bg-red-400')) {
+          item.remove();
+        }
+      });
     }
   };
 })();
@@ -267,8 +287,43 @@ const MainController = (function (ProductCtrl, UICtrl) {
           //show total
           UICtrl.showTotal(total);
 
-          UICtrl.addingState(item);
+          UICtrl.addingState();
         }
+        e.preventDefault();
+      });
+
+    //cancel button click
+    document
+      .querySelector(UISelectors.cancelButton)
+      .addEventListener('click', function (e) {
+        UICtrl.addingState();
+        UICtrl.clearWarnings();
+        e.preventDefault();
+      });
+
+    //delete button
+
+    document
+      .querySelector(UISelectors.deleteButton)
+      .addEventListener('click', function (e) {
+        //get selected product
+        const selectedProduct = ProductCtrl.getCurrentProduct();
+        //delete product
+        ProductCtrl.deleteProduct(selectedProduct);
+
+        //deleteUI
+        UICtrl.deleteProduct();
+
+        const total = ProductCtrl.getTotal();
+
+        if (total == 0) {
+          UICtrl.hideCard();
+        }
+
+        UICtrl.showTotal(total);
+
+        UICtrl.addingState();
+
         e.preventDefault();
       });
   };
@@ -282,6 +337,7 @@ const MainController = (function (ProductCtrl, UICtrl) {
       } else {
         UICtrl.hideCard();
       }
+
       //Load event Listeners
       loadEventListeners();
     }
